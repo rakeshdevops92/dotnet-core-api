@@ -25,5 +25,6 @@ steps:
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact'
   inputs:
-    PathtoPublish: '$(build.artifactstagingdirectory)/sample-api.$(Build.BuildNumber).zip'
+    PathtoPublish: '$(build.artifactstagingdirectory)'
+    ArtifactName: sample-api.$(Build.BuildNumber)
   condition: succeededOrFailed()
